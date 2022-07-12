@@ -170,7 +170,7 @@ EOF
 
 ```bash
 export APISERVER_NAME=sc-apiserver.com
-echo "127.0.0.1    ${APISERVER_NAME}" >> /etc/host
+echo "127.0.0.1    ${APISERVER_NAME}" >> /etc/hosts
 ```
 
 ### kubeadm 初始化
