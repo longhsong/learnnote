@@ -209,6 +209,14 @@ kubectl apply -f calico-3.9.2.yaml
 watch kubectl get pod -n kube-system -o wide
 ```
 
+### k8s kubectl tab 自动补全，Linux 命令自动补全
+```bash
+yum install -y bash-completion
+source /usr/share/bash-completion/bash_completion
+source <(kubectl completion bash)
+echo "source <(kubectl completion bash)" >> ~/.bashrc
+```
+
 ## 其余 master 初始化（可选，针对高可用）
 
 获取 certificate key
