@@ -90,6 +90,7 @@ echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
 echo "net.bridge.bridge-nf-call-ip6tables = 1" >> /etc/sysctl.conf
 echo "net.bridge.bridge-nf-call-iptables = 1" >> /etc/sysctl.conf
 # 执行命令以应用
+modprobe br_netfilter
 sysctl -p
 ```
 
