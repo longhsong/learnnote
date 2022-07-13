@@ -181,7 +181,7 @@ kubeadm init --config=kubeadm-config.yaml --upload-certs
 
 ## 检查初始化
 
-> 请等到所有容器组（大约 9 个）全部处于 Running 状态，才进行下一步
+> 其中coredns会处于Pending状态，需要安装网络插件才会正常
 
 ```bash
 kubectl get pod -n kube-system -o wide
