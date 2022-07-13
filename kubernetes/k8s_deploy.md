@@ -250,7 +250,7 @@ kubeadm join sc-apiserver.com:6443 --token pmatmv.4yb20pjfxai72czc     --discove
 
 ```
 
-## 初始化 work 节点
+## 初始化 node 节点
 
 获取加入命令
 
@@ -258,7 +258,7 @@ kubeadm join sc-apiserver.com:6443 --token pmatmv.4yb20pjfxai72czc     --discove
 kubeadm token create --print-join-command
 ```
 
- 	在需要加入的 work 上执行命令
+ 	在需要加入的 node 上执行命令
 
 ```bash
  # 上述命令生成的有效时间为 2 小时
@@ -266,9 +266,9 @@ kubeadm token create --print-join-command
 
 ```
 
-## 移除 worker 节点
+## 移除 node 节点
 
-在准备移除的 worker 节点上执行
+在准备移除的 node 节点上执行
 
 ```bash
 kubeadm reset
