@@ -265,9 +265,10 @@ export APISERVER_NAME=sc-apiserver.com  # 请替换实际的api-server name
 export MASTRE_IP=192.168.0.1 # 请替换实际的master ip
 echo "${MASTRE_IP} ${APISERVER_NAME}" >> /etc/host
 
- 	在需要加入的 node 上执行命令
 ```
 
+ 	在需要加入的 node 上执行命令
+  
 ```bash
  # 上述命令生成的有效时间为 2 小时
  kubeadm join sc-apiserver.com:6443 --token tlmp8m.095d6jcg52c03awb     --discovery-token-ca-cert-hash sha256:e40a7a1cce67d7aadd320a91c783ba5d56422c733e69ba021367cf638d91b143
