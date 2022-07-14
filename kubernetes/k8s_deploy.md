@@ -259,7 +259,14 @@ kubeadm join sc-apiserver.com:6443 --token pmatmv.4yb20pjfxai72czc     --discove
 kubeadm token create --print-join-command
 ```
 
+初始化前，确认已添加 api-server 的域名解析
+```
+export APISERVER_NAME=sc-apiserver.com  # 请替换实际的api-server name
+export MASTRE_IP=192.168.0.1 # 请替换实际的master ip
+echo "${MASTRE_IP} ${APISERVER_NAME}" >> /etc/host
+
  	在需要加入的 node 上执行命令
+```
 
 ```bash
  # 上述命令生成的有效时间为 2 小时
