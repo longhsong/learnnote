@@ -94,6 +94,17 @@ modprobe br_netfilter
 sysctl -p
 ```
 
+## 修改 /etc/sysconfig/network-scripts/ifcfg-ens33 （动态ip改为静态ip）
+
+set -i "s/BOOTPROTO=\"dhcp\"/BOOTPROTO=\"static\"/g" /etc/sysconfig/network-scripts/ifcfg-ens33
+```bash
+cat << /etc/sysconfig/network-scripts/ifcfg-ens33 >> EOF
+IPADDR=$(ipconfig)
+NETMASK=子网掩码
+GATEWAY=网关，最后一位写2，不要写1
+DNS1=8.8.8.8域名
+EOF
+```
 ## 安装 docker
 
 可参考 [官网部署文档](https://docs.docker.com/install/linux/docker-ce/centos/)
