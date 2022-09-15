@@ -105,6 +105,8 @@ GATEWAY=网关，最后一位写2，不要写1
 DNS1=8.8.8.8域名
 EOF
 ```
+systemctl restart network
+
 ## 安装 docker
 
 可参考 [官网部署文档](https://docs.docker.com/install/linux/docker-ce/centos/)
