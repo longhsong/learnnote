@@ -276,7 +276,7 @@ kubeadm token create --print-join-command
 ```
 export APISERVER_NAME=sc-apiserver.com  # 请替换实际的api-server name
 export MASTRE_IP=192.168.0.1 # 请替换实际的master ip
-echo "${MASTRE_IP} ${APISERVER_NAME}" >> /etc/host
+echo "${MASTRE_IP} ${APISERVER_NAME}" >> /etc/hosts
 
 ```
 
